@@ -7,5 +7,5 @@ services:
      - "8888:8888"
     environment:
      - jupyter_password=password
-     - base_url=''
+     - base_url='/'
     command: bash -c "python /root/configgen.py && /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser --allow-root"

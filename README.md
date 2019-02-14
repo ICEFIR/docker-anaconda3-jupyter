@@ -12,7 +12,7 @@ docker-compose up -d
 
 Default password - password  
 You can modify it in docker-compose file, along with other settings such as ports, etc  
-Run the following command apply changes :)  
+Run the following command to apply changes :)  
 ```docker-compose down && docker-compose up -d```
 
 ## Credit

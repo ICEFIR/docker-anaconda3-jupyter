@@ -7,14 +7,17 @@ Make sure docker and docker-compose are installed
 ```   
 git clone https://github.com/ICEFIR/docker-anaconda3-jupyter  
 cd docker-anaconda3-jupyter  
-docker-compose up -d
+export jupyter_password=password && docker-compose up -d  # change this line to alter password. Note you can alter docker-compose file as well, how ever for security reson leaving plain password on disk is not recommanded
 ```   
+
 It can take a while to deploy, so please be patient :)   
 
-Default password - password  
-You can modify it in docker-compose file, along with other settings such as ports,base url etc  
+Default password - password.
+You can modify settings base url, ports in the docker-compose  
 Run the following command to apply changes :)  
-```docker-compose down && docker-compose up -d```     
+```docker-compose down && export jupyter_password=password && docker-compose up -d```     
+change the password to the desired one you want  
+
 
 Example of base url:   
   - \- base_url='https://www.example.com/notebook'

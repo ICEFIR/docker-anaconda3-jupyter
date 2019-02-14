@@ -1,7 +1,10 @@
 version: '2'
 services:
   anaconda3-jupyter:
-    build: .
+    build:
+      context: .
+      args:
+        jupyter_password: password_next
     ports:
      - "8888:8888"
     command: bash -c "/opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser --allow-root"

@@ -7,6 +7,7 @@ FROM debian:latest
 #  $ docker push continuumio/anaconda3:5.3.0
 
 ARG jupyter_password=password
+ENV jupyter_password=$jupyter_password
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 ENV PATH /opt/conda/bin:$PATH
 
@@ -32,7 +33,8 @@ RUN /opt/conda/bin/conda install jupyter -y --quiet && \
     mkdir /opt/notebooks && \
     /opt/conda/bin/jupyter notebook --generate-config
 
-
+COPY passgen.py /root/
+RUN /bin/bash -c "python /root/passgen.py"
 
 ENTRYPOINT [ "/usr/bin/tini", "--" ]
 CMD [ "/bin/bash" ]

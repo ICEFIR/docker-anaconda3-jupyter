@@ -13,4 +13,4 @@ overwrite_password = re.sub(r"^.*c\.NotebookApp\.password .*\n", f"c.NotebookApp
 #  print (overwrite_password)
 #  print(re.findall(r"^.*c\.NotebookApp\.password .*\n",content,flags=re.M))
 with open(config_path,'w') as f:
-  f.write(overwrite_base_url)
+  f.write(overwrite_password)

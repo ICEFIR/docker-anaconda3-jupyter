@@ -3,8 +3,8 @@ services:
   anaconda3-jupyter:
     build:
       context: .
-      args:
-        jupyter_password: password_next
     ports:
      - "8888:8888"
-    command: bash -c "/opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser --allow-root"
+    environment:
+     - jupyter_password=password
+    command: bash -c "python /root/passgen.py && /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser --allow-root"

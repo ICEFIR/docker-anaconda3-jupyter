@@ -11,6 +11,8 @@ docker-compose up -d
 
 Default password - password  
 You can modify the docker-compose file to change it, along with other settings such as ports, etc  
+After modifying the docker-compose file, run  
+```docker-compose down && docker-compose up -d```
 
 ## Credit
 Mostly modified from Anaconda3 official docker image and my friend's work :)  

@@ -34,7 +34,6 @@ RUN /opt/conda/bin/conda install jupyter -y --quiet && \
     /opt/conda/bin/jupyter notebook --generate-config
 
 COPY passgen.py /root/
-RUN /bin/bash -c "python /root/passgen.py"
 
 ENTRYPOINT [ "/usr/bin/tini", "--" ]
 CMD [ "/bin/bash" ]

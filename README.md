@@ -13,7 +13,12 @@ docker-compose up -d
 Default password - password  
 You can modify it in docker-compose file, along with other settings such as ports, etc  
 Run the following command to apply changes :)  
-```docker-compose down && docker-compose up -d```
+```docker-compose down && docker-compose up -d```  
+
+## Note
+This is intended to be used behind nginx reverse proxy, thus no SSL is included  
+Using SSL is highly recommanded, unless you just want to use it over LAN :)
+
 
 ## Credit
 Mostly modified from Anaconda3 official docker image and my friend's work :)  

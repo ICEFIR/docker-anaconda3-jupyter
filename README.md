@@ -7,7 +7,7 @@ Make sure docker and docker-compose are installed
 ```   
 git clone https://github.com/ICEFIR/docker-anaconda3-jupyter  
 cd docker-anaconda3-jupyter  
-echo -n Password: && read -s password && echo && export jupyter_password=$password && docker-compose up -d  # change this line to alter password. Note you can alter docker-compose file as well, how ever for security reson leaving plain password on disk is not recommanded
+echo -n Password: && read -s password && echo && export jupyter_password=$password && docker-compose up -d  # change this line to alter password. Note you can alter docker-compose file as well, however for security reasons leaving plain passwords on disks are not recommanded
 ```   
 
 It can take a while to deploy, so please be patient :)   

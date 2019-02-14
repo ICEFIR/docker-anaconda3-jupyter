@@ -17,9 +17,8 @@ Run the following command to apply changes :)
 ```docker-compose down && docker-compose up -d```     
 
 Example of base url:   
-  - base_url='https://www.example.com/notebook'
-or  
-  - base_url='/notebook'   
+  - \- base_url='https://www.example.com/notebook'
+  - \- base_url='/notebook'   
 
 ## Note
 This is intended to be used behind nginx reverse proxy, thus no SSL is included  

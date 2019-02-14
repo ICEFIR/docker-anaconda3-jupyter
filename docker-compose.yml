@@ -4,4 +4,4 @@ services:
     build: .
     ports:
      - "8888:8888"
-    command: bash -c "/opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser --NotebookApp.password='password' --allow-root"
+    command: bash -c "/opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser --allow-root"

@@ -7,14 +7,15 @@ Make sure docker and docker-compose are installed
 ```   
 git clone https://github.com/ICEFIR/docker-anaconda3-jupyter  
 cd docker-anaconda3-jupyter  
-export enable_password=1 && echo -n Password: && read -s password && export jupyter_password=$password && echo
+echo -n Password: && read -s password && export jupyter_password=$password && echo
 # Or an other methods that can set env variable jupyter_password securely
 docker-compose up -d
 ```   
 It can take a while to deploy, so please be patient :)  
 
-Note if jupyter_password environment is set to '', previous record will be kept (assuming containers were not removed).
-To disable password and use a token, set enable_password to 0
+Note if jupyter_password environment is set to empty string, previous record will be kept (assuming containers were not removed).
+To disable and remove password, set env variable disable_password to 1 and restart the image
+`export disable_password=1 && docker-compose stop && docker-compose up -d`
 
 
 You can modify settings base url, ports in the docker-compose  

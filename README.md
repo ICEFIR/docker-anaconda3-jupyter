@@ -15,7 +15,7 @@ It can take a while to deploy, so please be patient :)
 
 Note if jupyter_password environment is set to empty string, previous record will be kept (assuming containers were not removed).
 To disable and remove password, set env variable disable_password to 1 and restart the image
-`export disable_password=1 && docker-compose stop && docker-compose up -d`
+`export disable_password=1 && docker-compose stop && docker-compose start`
 
 
 You can modify settings base url, ports in the docker-compose  

@@ -1,5 +1,5 @@
-# anaconda3-jupyter
-Instantly deploy jupyter notebook with anaconda3, with read-to-use browser access :)  
+# anaconda3-jupyter docker-compose
+Docker compose file to deploy Anaconda 3 and jupyter notebook instantly, with read-to-use browser access :)  
 
 ## Usage  
 

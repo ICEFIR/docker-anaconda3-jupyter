@@ -20,7 +20,7 @@ To disable and remove password, set env variable disable_password to 1 and resta
 
 You can modify settings base url, ports in the docker-compose  
 Run the following command to apply changes :)  
-```docker-compose stop && docker-compose up -d```     
+```docker-compose stop && docker-compose start```     
 Example of base url:   
   \- base_url='https://www.example.com/notebook'   
   \- base_url='/notebook'    

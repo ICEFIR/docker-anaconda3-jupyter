@@ -11,4 +11,4 @@ services:
      - disable_password=$disable_password
      - jupyter_password=$jupyter_password
      - base_url='/'
-    command: bash -c "python /root/configgen.py && /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='0.0.0.0' --port=8888 --no-browser --allow-root"
+    command: bash -c "python /root/configgen.py" 

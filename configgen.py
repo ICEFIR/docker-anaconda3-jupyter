@@ -12,6 +12,7 @@ if "disable_password" in os.environ and os.environ['disable_password'] == '1':
 else:
   if "jupyter_password" in os.environ and os.environ['jupyter_password'] != '':
     hashed = passwd(os.environ['jupyter_password'])
+    os.environ['jupyter_password'] == "" # Reset password env for security reasons
     content = re.sub(r"^.*c\.NotebookApp\.password .*\n", f"c.NotebookApp.password = u'{hashed}'\n",content,flags=re.M)
 
 if "base_url" in os.environ:

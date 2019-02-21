@@ -12,3 +12,5 @@ services:
      - jupyter_password=$jupyter_password
      - base_url='/'
     command: bash -c "python /root/configgen.py" 
+    volumes:
+     - ./notebooks:/opt/notebooks

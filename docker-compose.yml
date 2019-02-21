@@ -2,12 +2,13 @@ version: '2'
 services:
   anaconda3-jupyter:
     container_name: anaconda3-jupyter
+    restart: always
     build:
       context: .
     ports:
      - "8888:8888"
     environment:
-     - enable_password=$enable_password
+     - disable_password=$disable_password
      - jupyter_password=$jupyter_password
      - base_url='/'
     command: bash -c "python /root/configgen.py && /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='0.0.0.0' --port=8888 --no-browser --allow-root"

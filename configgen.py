@@ -22,3 +22,6 @@ if "base_url" in os.environ:
 # print(re.findall(r"^.*c\.NotebookApp\.base_url .*\n",content,flags=re.M))
 with open(config_path,'w') as f:
   f.write(content)
+
+# Launch jupyter book from here to prevent a password leak
+os.system("/opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='0.0.0.0' --port=8888 --no-browser --allow-root")

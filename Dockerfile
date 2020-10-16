@@ -7,6 +7,4 @@ RUN /opt/conda/bin/conda install jupyter -y --quiet && \
 
 COPY configgen.py /root/
 
-ENTRYPOINT [ "/usr/bin/tini", "--" ]
-CMD [ "/bin/bash" ]
- 
+ENTRYPOINT ["/bin/bash", "-c", "python /root/configgen.py"]

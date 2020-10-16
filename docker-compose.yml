@@ -2,7 +2,6 @@ version: '2'
 services:
   anaconda3-jupyter:
     container_name: anaconda3-jupyter
-    restart: always
     build:
       context: .
     ports:
@@ -11,6 +10,6 @@ services:
      - disable_password=$disable_password
      - jupyter_password=$jupyter_password
      - base_url='/'
-    command: bash -c "python /root/configgen.py" 
+    
     volumes:
      - ./notebooks:/opt/notebooks
